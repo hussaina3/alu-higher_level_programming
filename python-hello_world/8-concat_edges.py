@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-word = "object-oriented programming with Python"
-language = "Python"
-print(word[:26] + language)
-
+str1 = "object-oriented programming"
+str2 = "with Python"
+print(str1 + " " + str2[5:])
