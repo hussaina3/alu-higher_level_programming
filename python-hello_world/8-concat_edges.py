@@ -1,2 +1,5 @@
 #!/usr/bin/python3
-print(f"{str1}{str2}")
+word = "object-oriented programming with Python"
+language = "Python"
+print(word[:26] + word[-6:])
+
