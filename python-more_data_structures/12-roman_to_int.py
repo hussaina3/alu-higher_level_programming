@@ -1,4 +1,3 @@
-cat > 12-roman_to_int.py << 'EOF'
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     if not isinstance(roman_string, str):
@@ -7,12 +6,11 @@ def roman_to_int(roman_string):
               'C': 100, 'D': 500, 'M': 1000}
     result = 0
     prev = 0
-    for c in reversed(roman_string):
-        curr = values[c]
+    for char in reversed(roman_string):
+        curr = values[char]
         if curr < prev:
             result -= curr
         else:
             result += curr
         prev = curr
     return result
-EOF
