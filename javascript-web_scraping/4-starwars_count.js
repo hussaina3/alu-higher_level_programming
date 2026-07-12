@@ -1,7 +1,12 @@
 #!/usr/bin/node
 const request = require('request');
 
-request.get(`${process.argv[2]}/`, (err, response, body) => {
+let url = process.argv[2];
+if (!url.endsWith('/')) {
+  url += '/';
+}
+
+request.get(url, (err, response, body) => {
   if (!err) {
     const films = JSON.parse(body).results;
     let count = 0;
